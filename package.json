@@ -1,6 +1,6 @@
 {
   "name": "modal-plugin-jbdv",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Modal plugin for React",
   "main": "dist/index.js",
   "repository": {
