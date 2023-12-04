@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# ~ React modal plugin ~
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation
 
-## Available Scripts
+### `npm install modal-plugin-jbdv`
 
-In the project directory, you can run:
+### `yarn install modal-plugin-jbdv`
 
-### `npm start`
+## Files to import
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```ruby
+import { Modal } from "modal-plugin-jbdv/dist/index.js";
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Then you can use the Modal component in your project.
 
-### `npm test`
+### `<Modal></Modal>`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Props
 
-### `npm run build`
+```
+title: string
+content: string
+buttons: array
+onClose: function
+customStyle: any
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+title: The title of the modal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+content: The content of the modal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+buttons: An array of objects to add buttons to the modal
 
-### `npm run eject`
+onClose: A function to execute when the modal is closed
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+customStyle: An object to add custom styles to the modal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Example
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```ruby
+import React, { useState } from "react";
+import { Modal } from "modal-plugin-jbdv/dist/index.js";
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+function App() {
+const [showModal, setShowModal] = useState(false);
 
-## Learn More
+const handleOpenModal = () => {
+    setShowModal(true);
+  };
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const buttons = [
+{
+label: "Close",
+onClick: () => handleCloseModal()
+}
+];
 
-### Code Splitting
+return (
+  <div className="App">
+    <button onClick={() => handleOpenModal()}>Open modal</button>
+      <Modal
+        title="Modal title"
+        content="Modal content"
+        buttons={buttons}
+        onClose={() => handleCloseModal()}
+        customStyle={{
+            modal: {
+            backgroundColor: "red"
+            },
+            button: {
+            backgroundColor: "white",
+            color: "red"
+             }
+        }}
+      />
+  </div>
+ );
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+export default App;
+```
 
-### Analyzing the Bundle Size
+Keywords
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+react modal plugin
