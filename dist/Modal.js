@@ -43,11 +43,11 @@ function Modal(_ref) {
     stroke: "#000000"
   }, /*#__PURE__*/_react.default.createElement("g", {
     id: "SVGRepo_bgCarrier",
-    "stroke-width": "0"
+    strokeWidth: "0"
   }), /*#__PURE__*/_react.default.createElement("g", {
     id: "SVGRepo_tracerCarrier",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
   }), /*#__PURE__*/_react.default.createElement("g", {
     id: "SVGRepo_iconCarrier"
   }, " ", /*#__PURE__*/_react.default.createElement("g", {
@@ -56,9 +56,9 @@ function Modal(_ref) {
     id: "Vector",
     d: "M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18",
     stroke: "#ffff",
-    "stroke-width": "2",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
   }), " "), " ")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "modal-header"
   }, /*#__PURE__*/_react.default.createElement("h2", {
