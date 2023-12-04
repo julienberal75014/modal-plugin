@@ -1,10 +1,16 @@
 # ~ React modal plugin ~
 
+A simple plugin to add a modal to your React project.
+
 ## Installation
 
-### `npm install modal-plugin-jbdv`
+```ruby
+npm install modal-plugin-jbdv
+```
 
-### `yarn install modal-plugin-jbdv`
+```ruby
+yarn install modal-plugin-jbdv
+```
 
 ## Files to import
 
@@ -14,7 +20,9 @@ import { Modal } from "modal-plugin-jbdv/dist/index.js";
 
 Then you can use the Modal component in your project.
 
-### `<Modal></Modal>`
+```ruby
+<Modal></Modal>
+```
 
 ## Props
 
@@ -84,7 +92,3 @@ return (
 
 export default App;
 ```
-
-Keywords
-
-react modal plugin
