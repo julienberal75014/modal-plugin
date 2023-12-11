@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import Modal from "../Modal";
 
 describe("Modal", () => {
-    it("renders without crashing", () => {
+    test("renders without crashing", () => {
         render(<Modal />);
     });
 

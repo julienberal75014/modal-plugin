@@ -17,6 +17,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "check-code-coverage": "^1.10.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -24,7 +25,7 @@
     "build": "react build",
     "copyCss": "copyFiles -u 1 ./src/modal.css ./dist",
     "build-dist": "SET NODE_ENV=production&& babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "keywords": [

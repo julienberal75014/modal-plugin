@@ -1,3 +1,5 @@
+![coverage](https://img.shields.io/badge/code--coverage-70%-green)
+
 # ~ React modal plugin ~
 
 A simple plugin to add a modal to your React project.
