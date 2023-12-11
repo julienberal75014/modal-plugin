@@ -1,4 +1,4 @@
-![code-coverage](https://img.shields.io/badge/code--coverage-70%-green)
+![code-coverage](https://img.shields.io/badge/code--coverage-70%25-green)
 
 # ~ React modal plugin ~
 
