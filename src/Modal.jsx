@@ -63,7 +63,11 @@ function Modal({ title = "", content, buttons = [], onClose, customStyle }) {
         </div>
         <div className="footer-buttons">
           {buttons.map((button, index) => (
-            <button key={index} onClick={button.onClick} style={button.style}>
+            <button
+              key={index}
+              onClick={button.onClick}
+              style={customStyle?.button}
+            >
               {button.label}
             </button>
           ))}
